@@ -18,7 +18,7 @@ AMovingCube::AMovingCube()
 
 
 	MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("CubePhysics"));
-	JumpForce = 600;
+	JumpForce = 700;
 	Is_Land = true;
 
 
