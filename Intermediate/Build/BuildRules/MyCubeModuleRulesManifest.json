@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Deepak\\MyCube\\Source\\MyCube\\MyCube.Build.cs",
+		"D:\\Deepak\\MyCube\\Source\\MyCube.Target.cs",
+		"D:\\Deepak\\MyCube\\Source\\MyCubeEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.1"
+}
