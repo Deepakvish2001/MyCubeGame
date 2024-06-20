@@ -26,21 +26,21 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UStaticMeshComponent* Cube;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	/*UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class UFloatingPawnMovement* MovementComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float JumpForce;
+	float JumpForce;*/
 
 	void MoveForward(float value);
 	void Right(float value);
-	void Jump();
-	void Land();
+	/*void Jump();
+	void Land();*/
 
 	
 
 
-	bool Is_Land;
+	//bool Is_Land;
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 

@@ -17,9 +17,9 @@ AMovingCube::AMovingCube()
 	RootComponent = Cube;
 
 
-	MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("CubePhysics"));
-	JumpForce = 600;
-	Is_Land = true;
+	//MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("CubePhysics"));
+	//JumpForce = 600;
+	//Is_Land = true;
 
 
 
@@ -40,13 +40,13 @@ void AMovingCube::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!Is_Land)
+	/*if (!Is_Land)
 	{
 		if (GetActorLocation().Z <= 100.f)
 		{
 			Land();
 		}
-	}
+	}*/
 }
 
 void AMovingCube::MoveForward(float value)
@@ -68,20 +68,20 @@ void AMovingCube::Right(float value)
 		AddActorLocalOffset(right * value * 1000.0f * GetWorld()->DeltaRealTimeSeconds);
 	}
 }
-void AMovingCube::Jump()
-{
-	if (Is_Land)
-	{
-		FVector Jumpvelociy = FVector(0, 0, JumpForce);
-		Cube->AddImpulse(Jumpvelociy, NAME_None, true);
-		Is_Land = false;
-	}
-}
+//void AMovingCube::Jump()
+//{
+//	if (Is_Land)
+//	{
+//		FVector Jumpvelociy = FVector(0, 0, JumpForce);
+//		Cube->AddImpulse(Jumpvelociy, NAME_None, true);
+//		Is_Land = false;
+//	}
+//}
 
-void AMovingCube::Land()
-{
-	Is_Land = true;
-}
+//void AMovingCube::Land()
+//{
+//	Is_Land = true;
+//}
 
 
 // Called to bind functionality to input
@@ -90,7 +90,7 @@ void AMovingCube::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &AMovingCube::MoveForward);
 	PlayerInputComponent->BindAxis(TEXT("Right"), this, &AMovingCube::Right);
-	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed,this, &AMovingCube::Jump);
+	//PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed,this, &AMovingCube::Jump);
 
 }
 

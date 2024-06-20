@@ -11,7 +11,6 @@ void EmptyLinkFunctionForGeneratedCodeMovingCube() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_APawn();
-ENGINE_API UClass* Z_Construct_UClass_UFloatingPawnMovement_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 MYCUBE_API UClass* Z_Construct_UClass_AMovingCube();
 MYCUBE_API UClass* Z_Construct_UClass_AMovingCube_NoRegister();
@@ -40,19 +39,8 @@ struct Z_Construct_UClass_AMovingCube_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MovingCube.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MovementComponent_MetaData[] = {
-		{ "Category", "MovingCube" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MovingCube.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpForce_MetaData[] = {
-		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "MovingCube.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Cube;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MovementComponent;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_JumpForce;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -61,12 +49,8 @@ struct Z_Construct_UClass_AMovingCube_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMovingCube_Statics::NewProp_Cube = { "Cube", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMovingCube, Cube), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Cube_MetaData), NewProp_Cube_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMovingCube_Statics::NewProp_MovementComponent = { "MovementComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMovingCube, MovementComponent), Z_Construct_UClass_UFloatingPawnMovement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovementComponent_MetaData), NewProp_MovementComponent_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMovingCube_Statics::NewProp_JumpForce = { "JumpForce", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMovingCube, JumpForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpForce_MetaData), NewProp_JumpForce_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMovingCube_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMovingCube_Statics::NewProp_Cube,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMovingCube_Statics::NewProp_MovementComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMovingCube_Statics::NewProp_JumpForce,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMovingCube_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMovingCube_Statics::DependentSingletons[])() = {
@@ -109,10 +93,10 @@ AMovingCube::~AMovingCube() {}
 struct Z_CompiledInDeferFile_FID_MyCube_Source_MyCube_MovingCube_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMovingCube, AMovingCube::StaticClass, TEXT("AMovingCube"), &Z_Registration_Info_UClass_AMovingCube, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingCube), 3742746455U) },
+		{ Z_Construct_UClass_AMovingCube, AMovingCube::StaticClass, TEXT("AMovingCube"), &Z_Registration_Info_UClass_AMovingCube, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingCube), 3716462956U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyCube_Source_MyCube_MovingCube_h_1751958464(TEXT("/Script/MyCube"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyCube_Source_MyCube_MovingCube_h_3678819984(TEXT("/Script/MyCube"),
 	Z_CompiledInDeferFile_FID_MyCube_Source_MyCube_MovingCube_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyCube_Source_MyCube_MovingCube_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
